@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../hash_rtl_srcs/bram.sv" \
+"../../../../../hash_rtl_srcs/fifo.sv" \
+"../../../../../hash_rtl_srcs/fnv_xor_pip.sv" \
+"../../../../../hash_rtl_srcs/hash_mapping.sv" \
+"../../../../../hash_rtl_srcs/hash_top.sv" \
+"../../../../../hash_rtl_srcs/hashing.sv" \
+"../../../../../hash_rtl_srcs/tb_hash_top_initial_bram.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

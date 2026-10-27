@@ -1,0 +1,881 @@
+
+*** Running vivado
+    with args -log hash_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source hash_top.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Mon Oct 26 22:51:17 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source hash_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {/home/anuragh-haridas/Documents/Projects _new/hash_test/hash_test.srcs/utils_1/imports/synth_1/hash_top.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/anuragh-haridas/Documents/Projects _new/hash_test/hash_test.srcs/utils_1/imports/synth_1/hash_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top hash_top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 58014
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2029.848 ; gain = 429.770 ; free physical = 253 ; free virtual = 10692
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hash_top' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/hash_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'hash_values' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/hashing.sv:3]
+	Parameter bucket_size bound to: 8192 - type: integer 
+	Parameter KEY_BYTES bound to: 13 - type: integer 
+	Parameter KEY_BITS bound to: 104 - type: integer 
+	Parameter TIMESTAMP bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage__parameterized0' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage__parameterized0' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage__parameterized1' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage__parameterized1' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage__parameterized2' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage__parameterized2' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage__parameterized3' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage__parameterized3' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage__parameterized4' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage__parameterized4' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage__parameterized5' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage__parameterized5' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage__parameterized6' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage__parameterized6' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage__parameterized7' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage__parameterized7' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage__parameterized8' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage__parameterized8' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage__parameterized9' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage__parameterized9' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage__parameterized10' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage__parameterized10' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fnv1a_stage__parameterized11' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+	Parameter BYTE_INDEX bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fnv1a_stage__parameterized11' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fnv_xor_pip.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'hash_values' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/hashing.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fifo' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fifo.sv:3]
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter KEY_BYTES bound to: 13 - type: integer 
+	Parameter KEY_BITS bound to: 104 - type: integer 
+	Parameter TIMESTAMP bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'hash_mapping' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/hash_mapping.sv:5]
+	Parameter bucket_size bound to: 8192 - type: integer 
+	Parameter ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter KEY_BYTES bound to: 13 - type: integer 
+	Parameter KEY_BITS bound to: 104 - type: integer 
+	Parameter TIMESTAMP bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'flow_table_bram' [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/bram.sv:4]
+	Parameter TABLE_SIZE bound to: 8192 - type: integer 
+	Parameter ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter KEY_WIDTH bound to: 104 - type: integer 
+	Parameter TIME_WIDTH bound to: 64 - type: integer 
+	Parameter ENTRY_WIDTH bound to: 169 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'flow_table_bram' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/bram.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'hash_mapping' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/hash_mapping.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'fifo' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/fifo.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'hash_top' (0#1) [/home/anuragh-haridas/Downloads/GeneratedLabelledFlows/hash_rtl_srcs/hash_top.sv:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2129.105 ; gain = 529.027 ; free physical = 319 ; free virtual = 10650
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2146.918 ; gain = 546.840 ; free physical = 319 ; free virtual = 10649
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2146.918 ; gain = 546.840 ; free physical = 319 ; free virtual = 10649
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2146.918 ; gain = 0.000 ; free physical = 318 ; free virtual = 10648
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/anuragh-haridas/Documents/Projects _new/hash_test/hash_test.srcs/constrs_1/new/hash.xdc]
+Finished Parsing XDC File [/home/anuragh-haridas/Documents/Projects _new/hash_test/hash_test.srcs/constrs_1/new/hash.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2285.668 ; gain = 0.000 ; free physical = 301 ; free virtual = 10631
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2285.668 ; gain = 0.000 ; free physical = 301 ; free virtual = 10631
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2285.668 ; gain = 685.590 ; free physical = 312 ; free virtual = 10643
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2293.672 ; gain = 693.594 ; free physical = 312 ; free virtual = 10642
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2293.672 ; gain = 693.594 ; free physical = 312 ; free virtual = 10642
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'hash_mapping'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                       0000000001 |                             0000
+                  READ_1 |                       0000000010 |                             0001
+                 CHECK_1 |                       0000000100 |                             0010
+                  READ_2 |                       0000001000 |                             0011
+                 CHECK_2 |                       0000010000 |                             0100
+                  READ_3 |                       0000100000 |                             0101
+                 CHECK_3 |                       0001000000 |                             0110
+             WRITE_ENTRY |                       0010000000 |                             1000
+           REPLACE_ENTRY |                       0100000000 |                             0111
+                COMPLETE |                       1000000000 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'hash_mapping'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2293.672 ; gain = 693.594 ; free physical = 313 ; free virtual = 10645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 3     
+	   3 Input    9 Bit       Adders := 1     
++---XORs : 
+	   2 Input    135 Bit         XORs := 103   
+	   2 Input     32 Bit         XORs := 65    
++---Registers : 
+	              169 Bit    Registers := 1     
+	              168 Bit    Registers := 17    
+	              104 Bit    Registers := 1     
+	               64 Bit    Registers := 4     
+	               32 Bit    Registers := 35    
+	               13 Bit    Registers := 3     
+	                9 Bit    Registers := 2     
+	                1 Bit    Registers := 22    
++---Multipliers : 
+	              25x32  Multipliers := 13    
++---RAMs : 
+	            1352K Bit	(8192 X 169 bit)          RAMs := 1     
+	              42K Bit	(256 X 168 bit)          RAMs := 1     
+	               8K Bit	(256 X 32 bit)          RAMs := 3     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 103   
+	   2 Input   13 Bit        Muxes := 2     
+	  10 Input   13 Bit        Muxes := 3     
+	  10 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 2     
+	  10 Input    1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: Generating DSP fnv_product, operation Mode is: A*(B:0x193).
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: operator fnv_product is absorbed into DSP fnv_product.
+DSP Report: Generating DSP fnv_hash_out_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register fnv_hash_out_reg is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+DSP Report: operator fnv_product is absorbed into DSP fnv_hash_out_reg.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[47]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[46]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[45]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[44]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[43]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[42]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[41]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[40]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[39]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[38]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[37]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[36]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[35]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[34]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[33]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[32]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[31]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[30]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[29]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[28]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[27]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[26]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[25]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[24]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[23]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[22]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[21]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[20]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[19]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[18]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[17]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[16]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[15]) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[47]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[46]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[45]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[44]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[43]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[42]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[41]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[40]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[39]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[38]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[37]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[36]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[35]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[34]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[33]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[32]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[31]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[30]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[29]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[28]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[27]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[26]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[25]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[24]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[23]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[22]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[21]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[20]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[19]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[18]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[17]__0) is unused and will be removed from module fnv1a_stage.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[47]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[46]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[45]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[44]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[43]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[42]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[41]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[40]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[39]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[38]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[37]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[36]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[35]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[34]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[33]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[32]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[31]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[30]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[29]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[28]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[27]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[26]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[25]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[24]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[23]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[22]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[21]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[20]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[19]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[18]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[17]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[16]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[15]) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[47]__0) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[46]__0) is unused and will be removed from module fnv1a_stage__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (fnv_hash_out_reg[45]__0) is unused and will be removed from module fnv1a_stage__parameterized0.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2293.672 ; gain = 693.594 ; free physical = 292 ; free virtual = 10626
+---------------------------------------------------------------------------------
+ Sort Area is  fnv_product_0 : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_0 : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_10 : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_10 : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_12 : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_12 : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_14 : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_14 : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_16 : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_16 : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_18 : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_18 : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_1a : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_1a : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_1c : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_1c : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_6 : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_6 : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_8 : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_8 : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_a : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_a : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_c : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_c : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_e : 0 0 : 1118 2808 : Used 1 time 0
+ Sort Area is  fnv_product_e : 0 1 : 1690 2808 : Used 1 time 0
+ Sort Area is  fnv_product_11 : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_11 : 0 1 : 1624 2740 : Used 1 time 0
+ Sort Area is  fnv_product_13 : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_13 : 0 1 : 1624 2740 : Used 1 time 0
+ Sort Area is  fnv_product_15 : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_15 : 0 1 : 1624 2740 : Used 1 time 0
+ Sort Area is  fnv_product_17 : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_17 : 0 1 : 1624 2740 : Used 1 time 0
+ Sort Area is  fnv_product_19 : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_19 : 0 1 : 1624 2740 : Used 1 time 0
+ Sort Area is  fnv_product_1b : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_1b : 0 1 : 1624 2740 : Used 1 time 0
+ Sort Area is  fnv_product_1d : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_1d : 0 1 : 1624 2740 : Used 1 time 0
+ Sort Area is  fnv_product_3 : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_3 : 0 1 : 1624 2740 : Used 1 time 0
+ Sort Area is  fnv_product_7 : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_7 : 0 1 : 1624 2740 : Used 1 time 0
+ Sort Area is  fnv_product_9 : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_9 : 0 1 : 1624 2740 : Used 1 time 0
+ Sort Area is  fnv_product_b : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_b : 0 1 : 1624 2740 : Used 1 time 0
+ Sort Area is  fnv_product_d : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_d : 0 1 : 1624 2740 : Used 1 time 0
+ Sort Area is  fnv_product_f : 0 0 : 1116 2740 : Used 1 time 0
+ Sort Area is  fnv_product_f : 0 1 : 1624 2740 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|hash_top    | u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg | 8 K x 169(READ_FIRST)  | W |   | 8 K x 169(WRITE_FIRST) |   | R | Port A and B     | 1      | 42     | 
+|hash_top    | u_fifo/key_mem_reg                              | 256 x 168(READ_FIRST)  | W |   | 256 x 168(WRITE_FIRST) |   | R | Port A and B     | 1      | 2      | 
+|hash_top    | u_fifo/hash1_mem_reg                            | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hash_top    | u_fifo/hash2_mem_reg                            | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hash_top    | u_fifo/hash3_mem_reg                            | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 16     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*(B:0x193)    | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17)+A*B | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2378.672 ; gain = 778.594 ; free physical = 194 ; free virtual = 10528
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2398.672 ; gain = 798.594 ; free physical = 297 ; free virtual = 10510
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|hash_top    | u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg | 8 K x 169(READ_FIRST)  | W |   | 8 K x 169(WRITE_FIRST) |   | R | Port A and B     | 1      | 42     | 
+|hash_top    | u_fifo/key_mem_reg                              | 256 x 168(READ_FIRST)  | W |   | 256 x 168(WRITE_FIRST) |   | R | Port A and B     | 1      | 2      | 
+|hash_top    | u_fifo/hash1_mem_reg                            | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hash_top    | u_fifo/hash2_mem_reg                            | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|hash_top    | u_fifo/hash3_mem_reg                            | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_32 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_33 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_34 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_35 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_36 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_37 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_38 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_39 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_40 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_41 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_fifo/u_hash_mapping/u_flow_table_bram/mem_reg_42 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2410.711 ; gain = 810.633 ; free physical = 287 ; free virtual = 10499
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2558.523 ; gain = 958.445 ; free physical = 272 ; free virtual = 10377
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2558.523 ; gain = 958.445 ; free physical = 272 ; free virtual = 10377
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2558.523 ; gain = 958.445 ; free physical = 264 ; free virtual = 10370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2558.523 ; gain = 958.445 ; free physical = 264 ; free virtual = 10370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2564.461 ; gain = 964.383 ; free physical = 264 ; free virtual = 10370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2564.461 ; gain = 964.383 ; free physical = 264 ; free virtual = 10370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+----------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|hash_top    | u_hash_values/HASH_PIP[2].u_fnv1a_stage/key_out_reg[79]  | 4      | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|hash_top    | u_hash_values/HASH_PIP[3].u_fnv1a_stage/key_out_reg[71]  | 5      | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|hash_top    | u_hash_values/HASH_PIP[4].u_fnv1a_stage/key_out_reg[63]  | 6      | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|hash_top    | u_hash_values/HASH_PIP[5].u_fnv1a_stage/key_out_reg[55]  | 7      | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|hash_top    | u_hash_values/HASH_PIP[6].u_fnv1a_stage/key_out_reg[47]  | 8      | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|hash_top    | u_hash_values/HASH_PIP[7].u_fnv1a_stage/key_out_reg[39]  | 9      | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|hash_top    | u_hash_values/HASH_PIP[8].u_fnv1a_stage/key_out_reg[31]  | 10     | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|hash_top    | u_hash_values/HASH_PIP[9].u_fnv1a_stage/key_out_reg[23]  | 11     | 20    | YES          | NO                 | YES               | 20     | 0       | 
+|hash_top    | u_hash_values/HASH_PIP[10].u_fnv1a_stage/key_out_reg[15] | 12     | 20    | YES          | NO                 | YES               | 20     | 0       | 
+|hash_top    | u_hash_values/HASH_PIP[11].u_fnv1a_stage/key_out_reg[7]  | 13     | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|hash_top    | u_hash_values/HASH_PIP[12].u_fnv1a_stage/valid_out_reg   | 14     | 65    | YES          | NO                 | YES               | 65     | 0       | 
++------------+----------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 16     | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 17     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 17     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 17     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 17     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 17     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 17     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 17     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 17     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 17     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 17     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 17     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | (A*B)'          | 15     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fnv1a_stage | A*B             | 17     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fnv1a_stage | (PCIN>>17+A*B)' | 0      | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    97|
+|3     |DSP48E1  |    39|
+|5     |LUT1     |    13|
+|6     |LUT2     |   662|
+|7     |LUT3     |    78|
+|8     |LUT4     |   390|
+|9     |LUT5     |   162|
+|10    |LUT6     |   444|
+|11    |RAMB18E1 |     5|
+|13    |RAMB36E1 |    44|
+|15    |SRL16E   |   225|
+|16    |FDRE     |  1919|
+|17    |FDSE     |     1|
+|18    |IBUF     |   171|
+|19    |OBUF     |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2564.461 ; gain = 964.383 ; free physical = 264 ; free virtual = 10370
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 833 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2564.461 ; gain = 825.633 ; free physical = 264 ; free virtual = 10370
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2564.469 ; gain = 964.383 ; free physical = 264 ; free virtual = 10370
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2564.469 ; gain = 0.000 ; free physical = 422 ; free virtual = 10527
+INFO: [Netlist 29-17] Analyzing 185 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2620.488 ; gain = 0.000 ; free physical = 420 ; free virtual = 10526
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 3291bc8e
+INFO: [Common 17-83] Releasing license: Synthesis
+102 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 2620.488 ; gain = 1140.199 ; free physical = 420 ; free virtual = 10526
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1840.417; main = 1759.521; forked = 264.934
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3327.754; main = 2620.492; forked = 917.039
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2644.500 ; gain = 0.000 ; free physical = 420 ; free virtual = 10526
+INFO: [Common 17-1381] The checkpoint '/home/anuragh-haridas/Documents/Projects _new/hash_test/hash_test.runs/synth_1/hash_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file hash_top_utilization_synth.rpt -pb hash_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 26 22:51:52 2026...
